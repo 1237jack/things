@@ -5,7 +5,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Protected Video</title>
   <style>
-    /* Center the login box on the page */
     body, html {
       margin: 0;
       padding: 0;
@@ -16,7 +15,6 @@
       font-family: Arial, sans-serif;
     }
 
-    /* Style the login box */
     #login {
       text-align: center;
       border: 1px solid #ccc;
@@ -26,9 +24,8 @@
       background: #fff;
     }
 
-    /* Hide the content until login */
     #videoPlayer {
-      display: none; /* Hidden until the correct password is entered */
+      display: none;
       position: absolute;
       top: 0;
       left: 0;
@@ -47,31 +44,25 @@
       const inputPassword = document.getElementById("password").value;
       const correctPassword = "Rock1237";
 
-      // Check if the password is correct
       if (inputPassword === correctPassword) {
-        // Hide login form and show the video player
         document.getElementById("login").style.display = "none";
         document.getElementById("videoPlayer").style.display = "block";
       } else {
-        // Alert if the password is incorrect
         alert("Incorrect password. Please try again.");
       }
     }
   </script>
 </head>
 <body>
-  <!-- Login form for password entry -->
   <div id="login">
     <h2>Enter Password to Access the Video</h2>
     <input type="password" id="password" placeholder="Enter Password" />
     <button onclick="checkPassword()">Submit</button>
   </div>
 
-  <!-- Video Player section (hidden by default) -->
   <div id="videoPlayer">
-    <!-- Video content here -->
     <video controls controlsList="nodownload">
-      <source src="https://drive.google.com/file/d/1egp0YOiiJow21w7BAJmP0vItNGdto03s/view">
+      <source src="https://drive.google.com/uc?export=download&id=1egp0YOiiJow21w7BAJmP0vItNGdto03s" type="video/mp4">
       Your browser does not support the video tag.
     </video>
   </div>
